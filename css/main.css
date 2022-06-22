@@ -9,6 +9,12 @@
   padding: 20px;
   border-radius: 10px;
 }
+.post.large {
+  grid-column: span 2;
+}
+.post:last-child {
+  grid-column: span 2;
+}
 
 @media screen and (max-width: 714px) {
   .posts {
@@ -27,11 +33,12 @@
   }
   .post {
     background-color: darkorchid;
+    grid-column: span 1;
   }
-  .post:last-child {
+  .posts .post {
     grid-column: span 1;
   }
   .container {
-    padding: 0 15px;
+    padding: 0 5px;
   }
 }
