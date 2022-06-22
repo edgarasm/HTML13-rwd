@@ -2,18 +2,20 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 15px;
-  transition: background-color 0.4s ease-in-out;
 }
 .post {
-  background-color: #fff;
+  /* background-color: #fff; */
+  transition: background-color 1s ease-in-out;
   padding: 20px;
   border-radius: 10px;
 }
 
 @media screen and (max-width: 714px) {
   .posts {
-    background-color: coral;
     grid-template-columns: 1fr 1fr;
+  }
+  .post {
+    background-color: coral;
   }
   .post:last-child {
     grid-column: span 2;
@@ -21,13 +23,15 @@
 }
 @media screen and (max-width: 450px) {
   .posts {
-    background-color: darkorchid;
     grid-template-columns: 1fr;
+  }
+  .post {
+    background-color: darkorchid;
   }
   .post:last-child {
     grid-column: span 1;
   }
   .container {
-    padding: 0 5px;
+    padding: 0 15px;
   }
 }
