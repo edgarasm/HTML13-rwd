@@ -1,0 +1,56 @@
+.logo {
+  grid-area: logo;
+  display: flex;
+}
+.logo i {
+  height: 100px;
+}
+.nav {
+  grid-area: nav;
+}
+/* .nav a {
+  display: inline-block;
+} */
+/* .nav:hover {
+  background-color: black;
+  color: #fff;
+} */
+
+.login {
+  grid-area: login;
+  display: flex;
+  flex-direction: column;
+}
+.content {
+  grid-area: content;
+}
+.help {
+  grid-area: help;
+}
+
+.container {
+  display: grid;
+  /* grid-template-rows: 1fr 1fr 2fr 2fr; */
+  grid-template-areas:
+    "logo logo logo" "nav nav nav" "login content content"
+    "help content content";
+  gap: 20px;
+}
+
+.grid-item {
+  background-color: #fff;
+  border: 1px solid grey;
+  padding: 1em 1em;
+  margin-top: 30px;
+  align-items: stretch;
+}
+
+@media screen and (max-width: 450px) {
+  grid-column: 1ff;
+  grid-template-areas:
+    "logo"
+    "nav"
+    "login"
+    "content"
+    "help";
+}
